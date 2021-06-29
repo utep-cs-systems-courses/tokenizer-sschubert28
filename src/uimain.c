@@ -14,12 +14,11 @@ int main()
     fgets(sentence, 100, stdin);
     if(strcmp(sentence, quit) == 10)
       goto done;
-    printf("%s", sentence);
     
-    printf("There is %d word/s\n", count_words(sentence));
-
+    printf("Input string: %s", sentence);
+    char **tokens = tokenize(sentence);
+    print_tokens(tokens);
     
- 
   }
  done:
   printf("Bye!\n");
