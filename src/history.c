@@ -32,7 +32,7 @@ void add_history(List *list, char *str) {
 }
 
 char *get_history(List *list, int id) {
-  Itme *node = list->root;
+  Item *node = list->root;
 
   while (node != NULL) {
     if (node->id == id) {
@@ -40,7 +40,7 @@ char *get_history(List *list, int id) {
     }
     node = node->next;
   }
-  return "Error";
+  return NULL;
 }
 
 void print_history(List *list) {
@@ -52,7 +52,7 @@ void print_history(List *list) {
 }
 
 void free_history(List *list) {
-  Item *node = list-.root;
+  Item *node = list->root;
   while (node != NULL) {
     free(node);
     node = node->next;

@@ -15,7 +15,7 @@ int main()
     if(strcmp(sentence, quit) == 10)
       goto done;
     
-    printf("Input string: %s", sentence);
+    printf( "%s\n", sentence);
     char **tokens = tokenize(sentence);
     print_tokens(tokens);
     
